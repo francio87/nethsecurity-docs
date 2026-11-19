@@ -147,6 +147,12 @@ A partire dalla versione 8.7.2, i pacchetti aggiuntivi vengono reinstallati auto
 
 :::
 
+:::warning
+
+Alcuni utenti hanno segnalato problemi nell'uso di QEMU guest agent su Proxmox. La causa più comune sembra essere l'opzione **Freeze/thaw guest filesystems during certain operations for consistency**, presente nelle impostazioni QEMU Guest Agent della macchina virtuale lato hypervisor. Se è necessario mantenere attivo il guest agent, si consiglia di disattivare questa opzione.
+
+:::
+
 ### Installazione su VMWare
 
 [VMWare](https://www.vmware.com) potrebbe incontrare problemi durante l'importazione diretta di immagini disco grezze. Per garantire un'importazione senza problemi, decomprimere prima il file immagine, quindi convertire l'immagine grezza nel formato nativo di VMWare `.vmdk` prima di procedere.
